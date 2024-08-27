@@ -45,8 +45,8 @@ p {
 
 .photo {
     width: 100%;
-    height: 400px; /* Define um tamanho fixo para as fotos */
-    object-fit: cover; /* Garante que a imagem preencha o contêiner sem distorção */
+    height: 400px; 
+    object-fit: cover; 
     border-radius: 10px;
 }
 
@@ -76,11 +76,11 @@ p {
 
 .heart {
     position: absolute;
-    top: -50px; /* Começa fora da tela */
-    font-size: 30px; /* Tamanho do emoji */
-    animation: fall 5s linear forwards; /* Queda uma vez */
+    top: -50px; 
+    font-size: 30px; 
+    animation: fall 5s linear forwards; 
     opacity: 0.8;
-    left: calc(10% + 80% * var(--random-pos)); /* Adiciona variação horizontal */
+    left: calc(10% + 80% * var(--random-pos)); 
 }
 
 @keyframes fall {
