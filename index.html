@@ -46,7 +46,7 @@
     months--;
     days += new Date(today.getFullYear(), today.getMonth(), 0).getDate();
 } else if (days === 0) {
-    days = 1; // Garante que o dia seja mostrado como 0 no dia exato do aniversário
+    days = 1;
 }
 
             if (months < 0) {
@@ -75,7 +75,6 @@
 
         setInterval(updateTime, 1000);
 
-        // Slideshow
         const images = [
             'imagens/foto1.jpeg',
             'imagens/foto2.jpeg',
@@ -98,10 +97,9 @@
             currentIndex = (currentIndex + 1) % images.length;
         }
 
-        setInterval(showNextImage, 3000); // Troca de imagem a cada 3 segundos
-        showNextImage(); // Mostrar a primeira imagem imediatamente
+        setInterval(showNextImage, 3000); 
+        showNextImage();
 
-        // Adiciona animação de corações após 10 segundos
         setTimeout(() => {
     const heartsContainer = document.querySelector('.hearts-container');
     const heartColors = ['🤍', '🤍']; // Corações rosa e azul
@@ -111,9 +109,9 @@
         heart.classList.add('heart');
         heart.textContent = heartColors[Math.floor(Math.random() * heartColors.length)];
 
-        // Posicionando o coração no meio da tela
+      
         heart.style.left = `${45 + (Math.random() * 20 - 5)}%`;
-        heart.style.animationDelay = `${Math.random() * 2}s`; // Diferentes tempos de queda
+        heart.style.animationDelay = `${Math.random() * 2}s`; 
         heartsContainer.appendChild(heart);
     }
 }, 1);
@@ -123,7 +121,7 @@ document.body.addEventListener('click', function playMusic() {
     audio.loop = true;
     audio.play();
 
-    // Remove o evento para que só funcione uma vez
+    
     document.body.removeEventListener('click', playMusic);
 });
     </script>
