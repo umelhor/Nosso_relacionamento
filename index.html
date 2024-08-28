@@ -6,8 +6,10 @@
     <link rel="icon" href="imagens/icon.jpg" type="image/png">
     <title>Nosso Relacionamento</title>
     <link rel="stylesheet" href="style.css  ">
+    
 </head>
 <body>
+    <body style="overflow-y: auto;">
     <audio autoplay loop>
         <source src="lisboa.mp3" type="audio/mp3">
         Seu navegador não suporta o elemento de áudio.
@@ -46,7 +48,7 @@
     months--;
     days += new Date(today.getFullYear(), today.getMonth(), 0).getDate();
 } else if (days === 0) {
-    days = 1;
+    days = 1; 
 }
 
             if (months < 0) {
@@ -75,6 +77,7 @@
 
         setInterval(updateTime, 1000);
 
+        // Slideshow
         const images = [
             'imagens/foto1.jpeg',
             'imagens/foto2.jpeg',
@@ -98,18 +101,18 @@
         }
 
         setInterval(showNextImage, 3000); 
-        showNextImage();
+        showNextImage(); 
 
+        
         setTimeout(() => {
     const heartsContainer = document.querySelector('.hearts-container');
-    const heartColors = ['🤍', '🤍']; // Corações rosa e azul
-
+    const heartColors = ['🤍', '🤍']; 
     for (let i = 0; i < 50; i++) {
         const heart = document.createElement('div');
         heart.classList.add('heart');
         heart.textContent = heartColors[Math.floor(Math.random() * heartColors.length)];
 
-      
+        
         heart.style.left = `${45 + (Math.random() * 20 - 5)}%`;
         heart.style.animationDelay = `${Math.random() * 2}s`; 
         heartsContainer.appendChild(heart);
@@ -121,7 +124,6 @@ document.body.addEventListener('click', function playMusic() {
     audio.loop = true;
     audio.play();
 
-    
     document.body.removeEventListener('click', playMusic);
 });
     </script>
